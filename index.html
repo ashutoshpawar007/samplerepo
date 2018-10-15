@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      .taskDone {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="app">
+
+        <input type="text" v-model="todoItem.name" placeholder="Enter task">
+      <!--  <input type="text" v-model="todoItem.priority" placeholder="Enter priority">
+-->
+        <select v-model="todoItem.priority">
+          <<option>High</option>
+          <<option>Medium</option>
+          <<option>Low</option>
+        </select>
+        <button v-on:click="addTask()">Add</button>
+
+
+
+      <ul>
+        <li v-for="item in todoItem">
+          <input type="checkbox" v-model="item.status">
+          <span :class="{taskDone: item.status}">
+          {{item.name}}-->{{item.priority}}</span>
+          <button type="button" v-on:click="deleteTask(item)">Delete</button>
+
+        </li>
+      </ul>
+
+    </div>
+    <script src="index.js" ></script>
+  </body>
+</html>
