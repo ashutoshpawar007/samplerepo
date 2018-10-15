@@ -1,5 +1,6 @@
 var app = new Vue({
 /* this is a new comment we have added*/
+/* this is the change made by the second user*/
   el: '#app',
   data:{
     todoItem:[
